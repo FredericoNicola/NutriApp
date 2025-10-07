@@ -1,0 +1,12 @@
+{
+  "name": "@appplaceholder/db",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "prisma:generate": "prisma generate",
+    "prisma:migrate:dev": "prisma migrate dev --name init"
+  },
+  "devDependencies": {
+    "prisma": "^5.12.0"
+  }
+}

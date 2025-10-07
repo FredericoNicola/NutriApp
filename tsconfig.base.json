@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM"],
+    "module": "ESNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "paths": {
+      "@appplaceholder/config": ["packages/config/src"],
+      "@appplaceholder/ui": ["packages/ui/src"],
+      "@appplaceholder/db": ["packages/db"]
+    }
+  },
+  "include": []
+}

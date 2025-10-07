@@ -1,0 +1,11 @@
+Run these after installing dependencies:
+
+pnpm install
+pnpm -w -r run prisma:generate
+pnpm dev
+
+If you want to create a GitHub repo and push:
+gh repo create FredericoNicola/appplaceholder-scaffold --public --source=. --remote=origin --push
+
+Then open in VS Code:
+code .

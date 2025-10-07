@@ -1,0 +1,20 @@
+{
+  "name": "appplaceholder-scaffold",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@8.0.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "bootstrap": "pnpm install",
+    "dev": "concurrently \"pnpm --filter @appplaceholder/web dev\" \"pnpm --filter @appplaceholder/api dev\"",
+    "build": "pnpm -w -r build",
+    "lint": "pnpm -w -r lint",
+    "test": "pnpm -w -r test"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
