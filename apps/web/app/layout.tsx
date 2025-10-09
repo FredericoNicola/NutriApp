@@ -1,11 +1,15 @@
-import './globals.css'
+import "../globals.css";
 
 export const metadata = {
-  title: 'App placeholder scaffold',
-  description: 'Monorepo demo'
-}
+  title: "App placeholder scaffold",
+  description: "Monorepo demo",
+};
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <body className="min-h-screen bg-gray-50 text-slate-900">
@@ -15,5 +19,5 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main className="max-w-4xl mx-auto p-4">{children}</main>
       </body>
     </html>
-  )
+  );
 }
