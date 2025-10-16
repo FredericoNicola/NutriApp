@@ -1,9 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  experimental: {
-    appDir: true
-  }
-}
+  allowedDevOrigins: ["localhost", "192.168.1.89"], // allow your IP
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

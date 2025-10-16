@@ -1,17 +1,17 @@
-import { Controller, Get } from '@nestjs/common'
-import { UsersService } from './users.service'
+import { Controller, Get } from "@nestjs/common";
+import { UsersService } from "./users.service";
 
 @Controller()
 export class UsersController {
   constructor(private usersService: UsersService) {}
 
-  @Get('health')
+  @Get("health")
   health() {
-    return { status: 'ok' }
+    return { status: "ok" };
   }
 
-  @Get('users')
+  @Get("users")
   async getUsers() {
-    return this.usersService.list()
+    return this.usersService.list();
   }
 }

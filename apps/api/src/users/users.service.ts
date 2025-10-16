@@ -1,19 +1,17 @@
 import { Injectable } from "@nestjs/common";
-import { PrismaClient } from "@prisma/client";
+import { PrismaService } from "../prisma/prisma.service";
 
 type User = { id: number; name: string; email?: string };
 
 @Injectable()
 export class UsersService {
-  private prisma = new PrismaClient();
+  constructor(private prisma: PrismaService) {}
 
   async list(): Promise<User[]> {
     try {
       const users = await this.prisma.user.findMany();
-      // users already have number ids, so return directly
       return users as unknown as User[];
     } catch {
-      // fallback sample users when DB not available
       return [
         { id: 1, name: "Nutritionist Jane", email: "jane@example.com" },
         { id: 2, name: "Client Bob", email: "bob@example.com" },
