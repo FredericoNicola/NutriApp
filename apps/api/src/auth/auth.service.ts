@@ -10,7 +10,7 @@ export class AuthService {
   async register(
     email: string,
     password: string,
-    name?: string,
+    name: string,
     professionalCard: string
   ) {
     const hashedPassword = await bcrypt.hash(password, 10);
